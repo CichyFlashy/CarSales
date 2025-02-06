@@ -8,31 +8,31 @@ def index():
 
 @app.route('/kontakt')
 def contact():
-    return '<h1>Kontakt</h1>'
+    return render_template('contact.html')
 
 @app.route('/o-nas')
 def about():
-    return '<h1>O nas</h1>'
+    return render_template('about.html')
 
-@app.route('/uslugi')
-def services():
-    return '<h1>Usługi</h1>'
+# @app.route('/uslugi')
+# def services():
+#     return render_template('index.html')
 
 @app.route('/uslugi/naprawa')
 def fix():
-    return '<h1>Naprawa</h1>'
+    return render_template('fix.html')
 
 @app.route('/uslugi/komis')
 def dealership():
-    return '<h1>Komis</h1>'
+    return render_template('dealership.html')
 
 @app.route('/uslugi/czesci')
 def parts():
-    return '<h1>Części samochodowe</h1>'
+    return render_template('parts.html')
 
 @app.route('/uslugi/detailing')
 def detailing():
-    return '<h1>Detailing</h1>'
+    return render_template('detailing.html')
 
 if __name__ == "__main__":
     app.run()
