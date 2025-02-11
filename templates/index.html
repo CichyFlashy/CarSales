@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car Sales</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        html, body {
-            height: 100%; 
-            margin: 0;    
-            padding: 0;   
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
         }
 
-        
-        #article{
+        #article {
+            display: flex;
             min-height: calc(100vh - 150px);
-            margin:0;
-            padding: 0; 
+            margin: 0;
+            padding: 0;
         }
 
         .navbar {
@@ -25,27 +27,29 @@
 
         .container-fluid {
             width: 100%;
-            padding: 0; 
+            padding: 0;
         }
 
         #footer {
-            width: 100%; 
-            height: 50px; 
-            margin: 0; 
+            width: 100%;
+            height: 50px;
+            margin: 0;
             padding: 0;
-            background-color: #343a40; 
+            background-color: #343a40;
             color: white;
             text-align: center;
-            line-height: 50px; 
+            line-height: 50px;
             overflow: hidden;
         }
 
-        #header
-        {
+        #header {
             width: 100%;
-            margin:0;
-            padding:0;
+            margin: 0;
+            padding: 0;
             background-color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
         .row {
@@ -53,91 +57,145 @@
             padding: 0;
         }
 
-        .col-md-9, .col-md-3 {
+        .col-12,
+        .col-sm-9,
+        .col-sm-3 {
             padding: 0;
-            margin:0;
+            margin: 0;
         }
-        
+
         ol {
-        list-style-type:none;
-        padding:0;
-        margin:0;
-        background-color:#FFF;
-        font-size:18px;
-        height:2em;
-        line-height:2em;
-        text-align:center;
-      }
-    
-      ol a {
-        display:block;
-        text-decoration:none;
-        color:#000;
-        padding:0 5px;
-      }
-      
-      ol > li {
-        float:left;
-        width:24.75vw;
-        margin-left:1px;
-        background-color:#FDD700;
-        height:2em;
-      }
-      
-      ol > li:first-child {
-        margin-left:0;
-      }
-      
-      ol > li:hover {
-        background-color:#EEE;
-      }
-      
-      ol > li:hover > a {
-        color:#09C;
-      }
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            background-color: #FFF;
+            font-size: 18px;
+            height: 2em;
+            line-height: 2em;
+            text-align: center;
+            display: flex;
+            position: relative;
+        }
 
-      ol > li:hover > ul {
-        display:block;
-      }
-     
-      ol > li > ul {
-        display:none;
-        list-style-type:none;
-        padding:0;
-        margin:0;
-      }
-      
-      ol > li > ul > li {
-        position:relative;
-        background-color:#EEE;
-      }
-      
-      ol > li > ul > li > a {
-        border-top:1px solid #FFF;
-      }
-      
-      ol > li > ul > li:hover {
-        background-color:#DDD;
-      }
+        ol a {
+            display: block;
+            text-decoration: none;
+            color: #000;
+            padding: 0 5px;
+        }
 
-      ol > li > ul > li:hover > a {
-        color:#09C;
-      }
-      
-      div > img
-      {
-        margin-left: 100px;
-        width:45vw;
-        height: 15vh;
-      }
+        ol>li {
+            width: 24.75vw;
+            margin-left: 1px;
+            background-color: #FDD700;
+            height: 2em;
+            position: relative;
+        }
+
+        ol>li:first-child {
+            margin-left: 0;
+        }
+
+        ol>li:hover {
+            background-color: #EEE;
+        }
+
+        ol>li:hover>a {
+            color: #09C;
+        }
+
+        /* Styl dla podmenu */
+        ol>li>ul {
+            display: none;
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #FDD700;
+            width: 100%; /* Podmenu ma szerokość głównego elementu */
+            z-index: 10;
+        }
+
+        /* Zapobiega znikaniu podmenu */
+        ol>li:hover>ul {
+            display: block;
+        }
+
+        ol>li>ul>li {
+            background-color: #EEE;
+            width: 100%;
+        }
+
+        ol>li>ul>li>a {
+            display: block;
+            padding: 10px;
+            border-top: 1px solid #FFF;
+        }
+
+        ol>li>ul>li:hover {
+            background-color: #DDD;
+        }
+
+        ol>li>ul>li:hover>a {
+            color: #09C;
+        }
+
+        #baner {
+            width: 45vw;
+            height: 15vh;
+            display: block;
+            margin-left: 20px;
+        }
+
+        #Logowanie {
+            text-align: center;
+        }
+
+        #userLogo {
+            width: 5vh;
+            height: 5vh;
+            display: inline-block;
+            vertical-align: middle;
+            margin-right: 10px;
+        }
+
+        .col-sm-3 p {
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: 0;
+            margin-right: 10px;
+        }
+
+        .col-sm-3 button {
+            border-radius: 15px;
+            padding: 10px;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
+        #article>.col-sm-9 {
+            background-color: lightgray;
+            flex: 3;
+        }
+
+        #article>.col-sm-3 {
+            background-color: lightblue;
+            flex: 1;
+        }
     </style>
 </head>
+
 <body>
     <div class="container-fluid">
+
         <div class="row" id="header">
-            <div class="col-md-9"><img src="static/images/baner.png"></div>
-            <div class="col-md-3">
-              Logowanie
+            <div class="col-sm-3"><img src="static/images/baner.png" id="baner"></div>
+            <div class="col-sm-3" id="Logowanie">
+                <img src="static/images/userLogo.png" id="userLogo">
+                <p>Nie zalogowano</p><br>
+                <button class="Logowanie">Zaloguj się</button>
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
@@ -154,12 +212,11 @@
                 <li><a href="{{url_for('about')}}">O nas</a></li>
                 <li><a href="{{url_for('contact')}}">Kontakt</a></li>
             </ol>
-                
-        </nav> 
-        
+        </nav>
+
         <div class="row" id="article">
-            <div class="col-md-9 bg-primary text-white p-3">Zawartość</div>
-            <div class="col-md-3 bg-secondary text-white p-3">Reklama</div>
+            <div class="col-sm-9">Zawartość</div>
+            <div class="col-sm-3">Reklama</div>
         </div>
         <div class="row" id="footer">
             <div class="col-12">
@@ -168,4 +225,5 @@
         </div>
     </div>
 </body>
+
 </html>
