@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Sales</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/style.css')}}">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row" id="header">
+            <div class="col-sm-3"><img src="../static/images/baner.png" id="baner"></div>
+            <div class="col-sm-3" id="Logowanie">
+                <img src="../static/images/userLogo.png" id="userLogo">
+                <p>Nie zalogowano</p><br>
+                <button class="Logowanie">Zaloguj się</button>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
+            <ol>
+                <li><a href="{{ url_for('index') }}">Strona główna</a></li>
+                <li>Usługi
+                    <ul>
+                        <li><a href="{{url_for('fix')}}">Naprawa</a></li>
+                        <li><a href="{{url_for('dealership')}}">Komis</a></li>
+                        <li><a href="{{url_for('parts')}}">Części</a></li>
+                        <li><a href="{{url_for('detailing')}}">Detailing</a></li>
+                    </ul>
+                </li>
+                <li><a href="{{url_for('about')}}">O nas</a></li>
+                <li><a href="{{url_for('contact')}}">Kontakt</a></li>
+            </ol>
+        </nav>
+
+        <div class="row" id="article">
+            <div class="col-sm-9">
+                {% block article_content %}
+                {% endblock %}
+            </div>
+            <div class="col-sm-3" id="ad"><img src="../static/images/ad.png" ></div>
+        </div>
+        <div class="row" id="footer">
+            <div class="footer-container">
+                <div class="footer-column">
+                    <h3>O nas</h3>
+                    <p>U nas znajdziesz wszystko czego szukasz. Skontaktuj się z nami lub odwiedź nas na naszych social mediach. Warto również zapisać się do naszego Newslettera!</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Kontakt</h3>
+                    <p>Email: kontakt@example.com</p>
+                    <p>Telefon: 123-456-789</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Social Media</h3>
+                    <p><a href="#">Facebook</a></p>
+                    <p><a href="#">Twitter</a></p>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <input type="email" placeholder="Wpisz swój email">
+                    <button>Subskrybuj</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
