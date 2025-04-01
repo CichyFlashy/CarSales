@@ -41,13 +41,6 @@ Car Sales to aplikacja internetowa stworzona przy użyciu frameworka Flask, umo�
 │-- README.md        # Dokumentacja
 ```
 
-## 🔧 Konfiguracja
-- Jeśli aplikacja wymaga bazy danych, uruchom migrację:
-  ```sh
-  flask db upgrade
-  ```
-- Możesz dostosować ustawienia w `config.py`.
-
 ## 🌟 Funkcje
 - Wyświetlanie ofert samochodów
 - Logowanie i rejestracja użytkowników
