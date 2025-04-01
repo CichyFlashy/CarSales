@@ -192,6 +192,12 @@ html,
         {
             text-align: center;
             vertical-align: center;
+            
+        }
+
+        #ad_img {
+            position: sticky;
+            top: 10px;
         }
 
         #footer {
