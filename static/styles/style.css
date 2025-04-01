@@ -197,7 +197,9 @@ html,
 
         #ad_img {
             position: sticky;
-            top: 10px;
+            top: 30px;
+            width:90%;
+            height:540px;
         }
 
         #footer {
