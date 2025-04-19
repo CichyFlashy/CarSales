@@ -7,12 +7,25 @@
     <title>Car Sales</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/style.css') }}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 </head>
 
 <body>
     <div class="container-fluid">
 
-        <!-- Nagłówek -->
+        <div class="bg-dark text-white py-2 px-3 d-flex justify-content-between align-items-center small">
+            <div>
+                <span class="me-3"><i class="bi bi-geo-alt-fill"></i> Rybnik, Polska</span>
+                <span class="me-3"><i class="bi bi-telephone-fill"></i> +48 123 456 789</span>
+                <span><i class="bi bi-envelope-fill"></i> kontakt@carsales.pl</span>
+            </div>
+            <div>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-twitter-x"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            </div>
+        </div>
+
         <div class="row py-3" id="header">
             <div class="col-md-9">
                 <img src="static/images/baner.png" id="baner" class="img-fluid">
@@ -24,7 +37,6 @@
             </div>
         </div>
 
-        <!-- Nawigacja (rozciągnięte menu) -->
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark w-100">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{{ url_for('index') }}">Car Sales</a>
@@ -57,70 +69,69 @@
                 </div>
             </div>
         </nav>
-       <!-- SLIDER -->
-<div id="customSlider" class="carousel slide my-4" data-bs-ride="carousel">
-    <div class="carousel-inner">
 
-        <!-- Slajd 1 -->
-        <div class="carousel-item active">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='images/slide1.png') }}" class="img-fluid rounded" >
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Profesjonalna mechanika samochodowa</h2>
-                        <p>Zadbaj o sprawność swojego auta dzięki naszym usługom serwisowym. Diagnostyka komputerowa, naprawy silnika, układu hamulcowego, zawieszenia i wiele więcej — wszystko w jednym miejscu, szybko i rzetelnie.</p>
-                        <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div id="customSlider" class="carousel slide my-4" data-bs-ride="carousel">
+            <div class="carousel-inner">
 
-        <!-- Slajd 2 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='images/slide2.png') }}" class="img-fluid rounded" alt="Auto 2">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Detailing – auto jak nowe</h2>
-                        <p>Oferujemy kompleksowe czyszczenie i renowację wnętrza oraz nadwozia pojazdu. Przywracamy blask lakieru, zabezpieczamy karoserię powłokami ceramicznymi i dbamy o każdy detal, jakby to był nasz własny samochód.</p>
-                        <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
+
+                <div class="carousel-item active">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/slide1.png') }}" class="img-fluid rounded" >
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Profesjonalna mechanika samochodowa</h2>
+                                <p>Zadbaj o sprawność swojego auta dzięki naszym usługom serwisowym. Diagnostyka komputerowa, naprawy silnika, układu hamulcowego, zawieszenia i wiele więcej — wszystko w jednym miejscu, szybko i rzetelnie.</p>
+                                <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </div>
 
-        <!-- Slajd 3 -->
-        <div class="carousel-item">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-md-6">
-                        <img src="{{ url_for('static', filename='images/slide3.png') }}" class="img-fluid rounded" alt="Auto 3">
-                    </div>
-                    <div class="col-md-6">
-                        <h2>Sprzedaż sprawdzonych samochodów</h2>
-                        <p>Szukasz auta? U nas znajdziesz tylko sprawdzone pojazdy z pewnego źródła. Gwarancja jakości, przejrzysta historia, atrakcyjne ceny i pomoc przy formalnościach – to nasza obietnica dla każdego klienta.</p>
-                        <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/slide2.png') }}" class="img-fluid rounded" alt="Auto 2">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Detailing – auto jak nowe</h2>
+                                <p>Oferujemy kompleksowe czyszczenie i renowację wnętrza oraz nadwozia pojazdu. Przywracamy blask lakieru, zabezpieczamy karoserię powłokami ceramicznymi i dbamy o każdy detal, jakby to był nasz własny samochód.</p>
+                                <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <div class="carousel-item">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-md-6">
+                                <img src="{{ url_for('static', filename='images/slide3.png') }}" class="img-fluid rounded" alt="Auto 3">
+                            </div>
+                            <div class="col-md-6">
+                                <h2>Sprzedaż sprawdzonych samochodów</h2>
+                                <p>Szukasz auta? U nas znajdziesz tylko sprawdzone pojazdy z pewnego źródła. Gwarancja jakości, przejrzysta historia, atrakcyjne ceny i pomoc przy formalnościach – to nasza obietnica dla każdego klienta.</p>
+                                <a href="{{ url_for('dealership') }}" class="btn btn-primary">Zobacz więcej</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#customSlider" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#customSlider" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            </button>
         </div>
 
-    </div>
 
-    <!-- Strzałki -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#customSlider" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#customSlider" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    </button>
-</div>
-
-        <!-- Treść strony -->
         <div class="row" id="article">
             <div class="col-md-12">
                 {% block article_content %}
@@ -129,7 +140,7 @@
 
         </div>
 
-        <!-- Stopka -->
+
         <footer class="row bg-dark text-white py-4" id="footer">
             <div class="col-md-3">
                 <h5>O nas</h5>
